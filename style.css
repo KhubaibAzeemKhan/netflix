@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@600&family=Poppins:wght@300;400;700&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-color: black;
+}
+
+.main {
+    background-image: url(assets/images/bg.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: max(1200px, 100vw);
+    /* In main the background image was not appearing because I didn't set the height */
+    height: 70vh;
+    position: relative;
+}
+
+.main .box {
+    background-color: black;
+    opacity: 0.69;
+    height: 70vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 70vw;
+    margin: auto;
+    height: 62px;
+}
+
+nav img {
+    width: 135px;
+    position: relative;
+    z-index: 10;
+}
+
+nav button {
+    position: relative;
+    z-index: 10;
+}
+
+.hero {
+    font-family: 'Martel Sans', sans-serif;
+    color: white;
+    height: calc(100% - 62px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    gap: 21px;
+    padding: 0px 30px;
+}
+/* Greater than symbol is used for immediate first child */
+.hero> :nth-child(1){
+    font-weight: 900;
+    font-size: 48px;
+    text-align: center;
+}
+.hero> :nth-child(2){
+    font-weight: 400;
+    font-size: 24px;
+    text-align: center;
+}
+.hero> :nth-child(3){
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+}
+.separation{
+    height: 7px;
+    background-color: rgb(50, 48, 48);
+    position: relative;
+    z-index: 20;
+}
+.main input{
+    padding: 9px 100px 10px 14px;
+    font-size: 12px;
+    border-radius: 4px;
+    color: white;
+    background-color: rgba(23, 23,23 ,0.2);
+    border: 1px solid rgba(241, 238, 238, 0.5);
+}
+.hero-buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;}
+
+.btn{
+    padding: 3px 8px;
+    font-weight: 400;
+    color: white;
+    background-color: rgba(248, 243, 243, 0.020);
+    border: 1px solid white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.btn-red-sm{
+    background-color: red;
+    color: white;
+}
+.btn-red{
+    background-color: red;
+    color: white;
+    padding: 3px 24px;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 4px;
+}
+
+.first {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 70vw;
+    margin: auto;
+    color: white;
+}
+
+@media screen and (max-width: 1150px){
+    .first{
+        flex-wrap: wrap;
+    }
+
+    nav{
+        max-width: 90vw;
+    }
+
+    .hero-buttons{
+        flex-direction: column;
+    }
+}
+.sec-img{
+    position: relative;
+}
+
+.sec-img img{
+    width: 558px;
+    position: relative;
+    z-index: 1;
+}
+
+.sec-img video{
+    position: absolute;
+    top: 85px;
+    left: 77px;
+    right: 0;
+}
+
+.first > div{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.first > div :first-child{
+    font-size: 48px;
+    font-weight: bolder;
+    padding: 35px 0;
+}
+.first > div :nth-child(2){
+    font-size: 24px;
+}
+.second > div{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.faq{
+    color: white;
+    padding: 35px;
+}
+.faq h2{
+    text-align: center;
+    font-size: 48px;
+}
+.faqbox{
+    transition: all 1s;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(45,45,45);
+    padding: 24px;
+    width: 70vw;
+    margin: 10px auto;
+    cursor: pointer;
+    font-size: 24px;
+}
+.faqbox img{
+    filter: invert(1);
+}
+.faqbox:hover{
+    background-color: rgb(66, 64, 64);
+}
+.none{
+    display: none;
+}
+.end-email{
+    text-align: center;
+}
+
+.end-email input{
+    padding: 13px 100px 10px 14px;
+    font-size: 12px;
+    border-radius: 4px;
+    color: white;
+    background-color: rgba(23, 23,23 ,0.2);
+    border: 1px solid rgba(241, 238, 238, 0.5);
+}
+
+.end-email span{
+    font-weight: 400;
+    font-size: 20px;
+    color: white;
+}
+.end-buttons{
+    padding: 34px;
+
+}
+
+footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 75px;
+    color: white;
+    max-width: 60vw;
+    margin: auto;
+}
+@media screen and (max-width: 1150px){
+    footer{
+        grid-template-columns: 1fr 1fr;
+        padding: 20px 40px;
+        margin: 0px;
+        max-width: 80vw
+    }
+    .footer-item{
+        padding: 0px !important;
+    }
+
+    .hero> :nth-child(1){
+        font-size: 32px;
+    }
+    .hero> :nth-child(2){
+        font-size: 18px;
+    }
+    .hero> :nth-child(3){
+        font-size: 18px;
+    }
+    .faq h2{
+        font-size: 32px;
+    }
+
+    .sec-img img{
+        width: 400px;
+    }
+    .sec-img video{
+        width: 400px;
+    }
+
+}
+footer a{
+    color: rgba(255,255,255,0.7);
+}
+.footer-item{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 90px 0px;
+}
